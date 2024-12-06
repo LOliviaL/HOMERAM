@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Rame</title>
+    <style>
+        .logo3{
+            border-radius: 100%;
+            width: 90px;
+            height: 90px;
+
+        }
+        .partie1{
+            width: 100%;
+            height: 600px;
+            background-image: url("https://zupimages.net/up/24/49/sfqt.jpeg");
+            background-repeat: no-repeat;
+        }
+        .text-P1{
+            font-family: 'Helvetica',sans-serif;
+            color: white;
+            font-size: 60px;
+            position: absolute;
+            top: 30%;
+            left: 19%;
+            animation-duration: 4s;
+            animation-name: Slidein;
+
+        }
+        .text2-P1{
+            font-family: 'Helvetica',sans-serif;
+            color: white;
+            font-size: 60px;
+            position: absolute;
+            top: 40%;
+            left: 19%;
+            animation-duration: 4s;
+            animation-name: Slidein;
+        }
+        @keyframes Slidein {
+            from {
+                margin-left: 100%;
+                width: 400%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 48%;
+            }
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 400%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        .text1-P1{
+            font-family: 'Hoefler Text',sans-serif;
+            color: white;
+            font-size: 40px;
+            position: absolute;
+            top: 70%;
+            left: 15%;
+            animation-duration: 4s;
+            animation-name: slidein;
+        }
+        .main{
+            padding-block: 6em;
+        }
+        .partie2{
+            inline-size: 90%;
+            margin-inline: auto;
+            max-inline-size: 48em;
+            line-height: 1.75;
+        }
+        .text1-P2{
+            font-family: "Helvetica", sans-serif;
+            font-size: 35px;
+            animation-duration: 4s;
+            animation-name: slidein;
+        }
+
+        .text-P2{
+            font-family: "Hoefler Text", sans-serif;
+            font-size: 20px;
+        }
+        .image {
+            display: block;
+            width: 1450px;
+            height: 800px;
+        }
+        .container1 {
+            position: relative;
+            width: 65%;
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.5);
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .container1:hover .overlay {
+            width: 100%;
+        }
+
+        .text-P3 {
+            font-family: "Hoefler Text";
+            white-space: pre;
+            color: white;
+            font-size: 20px;
+            line-height: 1.5;
+            position: absolute;
+            overflow: hidden;
+            top: 40%;
+            left: 70%;
+            transform: translate(-75%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        .text-P4{
+            font-family: "Hoefler Text";
+            white-space: pre;
+            color: white;
+            font-size: 25px;
+            line-height: 1.75;
+            position: absolute;
+            overflow: hidden;
+            top: 40%;
+            left: 70%;
+            transform: translate(-75%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        .partie7{
+            position: relative;
+            font-family: "Hoefler Text";
+            color: white;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+        .text-P7{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+        .logo4{
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .sticky {
+            position: sticky;
+            will-change: transform;
+        }
+
+        .sticky--top {
+            top: 0;
+        }
+
+        .header {
+            background: url("https://zupimages.net/up/21/49/fc2n.png")center;
+            padding-block: 0em;
+        }
+        .header::after {
+            bottom: 0;
+            box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
+            content: '';
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        h1 {
+            margin-block: 0 0.5em;
+        }
+
+        .navigation__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation__list--inline {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        .navigation__link {
+            font-family: 'Helvetica', sans-serif;
+            color: black;
+            display: block;
+            padding-inline: 1em;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .wrapper{
+            width: 90%;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+        .cols{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .col{
+            width: calc(25% - 2rem);
+            margin: 1rem;
+            cursor: pointer;
+        }
+
+        .container{
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+        }
+
+        .front, .back{
+            background-size: cover;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+            border-radius: 10px;
+            background-position: center;
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            text-align: center;
+            min-height: 280px;
+            height: auto;
+            border-radius: 10px;
+            color: white;
+            font-family: "Hoefler Text";
+            font-size: 1.2rem;
+        }
+
+        .back{
+            background-image: url("https://zupimages.net/up/24/49/i590.jpg");
+            background-repeat: no-repeat;
+
+        }
+
+        .front:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            display: block;
+            opacity: .6;
+            background-color: #000;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        .container:hover .front,
+        .container:hover .back{
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+
+        .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .inner{
+            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+            top: 50%;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: 1px solid transparent;
+            -webkit-perspective: inherit;
+            perspective: inherit;
+            z-index: 2;
+        }
+
+        .container .back{
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container .front{
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container:hover .back{
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container:hover .front{
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .front .inner p{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .front .inner p:after{
+            content: '';
+            width: 4rem;
+            height: 2px;
+            position: absolute;
+            background: #C6D4DF;
+            display: block;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -.75rem;
+        }
+
+        .front .inner span{
+            color: rgba(255,255,255,0.7);
+            font-family: 'Montserrat';
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: 64rem){
+            .col{
+                width: calc(33.333333% - 2rem);
+            }
+        }
+
+        @media screen and (max-width: 48rem){
+            .col{
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media screen and (max-width: 32rem) {
+            .col {
+                width: 100%;
+                margin: 0 0 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header sticky sticky--top js-header">
+    <table>
+        <div class="grid">
+        <tr>
+            <td><a href="index.html"> <img src="https://zupimages.net/up/24/49/swra.jpg" class="logo3"> </a></td>
+            <td>
+                <nav class="navigation">
+                    <ul class="navigation__list navigation__list--inline">
+                        <li class="navigation__item"><a href="index.html" class="navigation__link">ACCEUIL</a></li>
+                        <li class="navigation__item"><a href="formulaire.html" class="navigation__link">FORMULAIRE</a></li>
+
+                    </ul>
+                </nav>
+             </td>
+        </tr></div>
+    </table>
+    <hr color="grey">
+</header>
+<br>
+<div class="partie1">
+    <br>
+    <h1 class="text-P1"> L’Océan</h1><br>
+    <h1 class="text2-P1"> le Corps de notre Planète </h1><br>
+    <h3 class="text1-P1"> Comme le corps humain, l'Océan est vital pour la vie. </h3>
+</div>
+<div class="wrapper">
+    <h1 class="text1-P2">Corps Humain de l'Océan</h1>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/4g9y.jpg)">
+                    <div class="inner">
+                        <p>Cœur et Courants Marins</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p> <font color="black"> Cœur : Pompe le sang dans tout le corps pour distribuer l’oxygène et les nutriments.
+                            Courants Marins : Circulent à travers les océans pour transporter chaleur, nutriments et oxygène, assurant la vie marine et régulant le climat.</font> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image:url(https://zupimages.net/up/24/49/2ehg.jpg)">
+                    <div class="inner">
+                        <p>Cerveau et Système Océanique Global</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Cerveau : Centre de contrôle, coordonne toutes les fonctions vitales.
+                            Océan : Agit comme le cerveau de la planète, influençant les écosystèmes terrestres, le climat et les cycles vitaux.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/jrlh.jpg)">
+                    <div class="inner">
+                        <p>Poumons et Photosynthèse Océanique</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Poumons : Permettent la respiration, en absorbant l’oxygène et en expulsant le dioxyde de carbone.
+                            Océan : Le phytoplancton agit comme les poumons de la planète,
+                            produisant plus de 50 % de l’oxygène sur Terre et absorbant le dioxyde de carbone.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/42yo.jpg)">
+                    <div class="inner">
+                        <p>Foie et Mangroves</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Foie : Filtre les toxines et nettoie le sang, contribuant à la détoxification du corps.
+                            Mangroves et Zones Humides : Filtrent les polluants et purifient l’eau, servant de système de nettoyage naturel de l’Océan.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/sjhn.jpg)">
+                    <div class="inner">
+                        <p>Estomac et Fonds Océaniques</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Estomac : Décompose les aliments pour libérer de l’énergie et des nutriments.
+                            Fonds Océaniques : Décomposent les matières organiques pour recycler les nutriments, alimentant les écosystèmes marins.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/gepd.jpg)">
+                    <div class="inner">
+                        <p>Reins et Cycle de l’Eau</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Reins : Régulent l'équilibre hydrique et chimique dans le corps en filtrant les déchets.
+                            Océan : Joue un rôle central dans le cycle de l’eau, assurant le transport et la purification de l'eau douce.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/1nyd.png)">
+                    <div class="inner">
+                        <p>Peau et Surface Océanique</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Peau : Protège le corps des agressions extérieures tout en régulant la température.
+                            Surface de l’Océan : Protège la planète des rayons solaires excessifs et joue un rôle clé dans l’échange thermique avec l’atmosphère.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url(https://zupimages.net/up/24/49/0on2.png)">
+                    <div class="inner">
+                        <p>Squelette et Récifs Coralliens</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><font color="black"> Squelette : Fournit structure et soutien au corps.
+                            Récifs Coralliens : Servent de structure aux écosystèmes marins, abritant une biodiversité incroyable.</font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="main">
+    <div class="partie2">
+        <h1 class="text1-P2"> POURQUOI PROTEGER L'OCEAN ?</h1>
+
+        <p class="text-P2"><b>1. L’Océan, Producteur d’Oxygène </b> </p>
+        <p class="text-P2">Plus de 50 % de l’oxygène que nous respirons provient des océans,
+            grâce au phytoplancton, ces organismes microscopiques qui réalisent la photosynthèse.</p>
+        <br>
+
+        <p class="text-P2"><b>2. Régulateur Climatique </b> </p>
+        <p class="text-P2">L’Océan absorbe environ 90 % de la chaleur excédentaire due au
+            réchauffement climatique, limitant les variations extrêmes de température.
+        </p>
+        <p class="text-P2">Il stocke aussi une grande quantité de dioxyde de carbone, ralentissant
+            les effets du changement climatique.
+        </p>
+        <br>
+        <p class="text-P2"><b>3. Source de Vie </b> </p>
+        <p class="text-P2">L’Océan abrite une biodiversité extraordinaire, avec des millions
+            d’espèces animales et végétales. Ces écosystèmes sont interdépendants et jouent un rôle
+            clé dans les cycles naturels.</p>
+        <br>
+        <p class="text-P2"><b>4. Réservoir de Nourriture </b> </p>
+        <p class="text-P2">Plus de 3 milliards de personnes dépendent des ressources marines
+            comme source principale de protéines. Les océans sont essentiels pour assurer
+            la sécurité alimentaire mondiale.</p>
+        <br>
+        <p class="text-P2"><b>5. Protection Contre les Catastrophes Naturelles </b> </p>
+        <p class="text-P2">Les écosystèmes marins comme les récifs coralliens et les mangroves protègent
+            les côtes en atténuant l’impact des tempêtes, des tsunamis et de l’érosion.</p>
+        <br>
+
+        <p class="text-P2"><b>6. Économie et Moyens de Subsistance </b> </p>
+        <p class="text-P2">La mer soutient de nombreuses industries, comme la pêche, le tourisme,
+            et les énergies renouvelables. Des millions d’emplois dépendent directement de la santé des océans.</p>
+        <br>
+
+
+
+    </div>
+</main>
+
+<br>
+<div class="container1">
+    <img src="https://zupimages.net/up/21/49/2pjc.jpg" alt="font A2" class="image" width="1450" height="700">
+    <div class="overlay">
+        <div class="text-P3">
+            <p><font size="7">             Nous sauvons l'une des espèces</font>
+                <font color="blue" size="7">           les plus grandes
+                    les plus menacées au monde</font>
+
+                Problématique
+
+                Il ne reste qu'environ 400 baleines franches de l'Atlantique Nord dans le
+                monde. Leurs routes migratoires bordent la côté du nord du continent américain, qui est l'une
+                des zones les plus industrialisées de nos océans. Le matériel de pêche et les innombrables
+                navires commerciaux qui la fréquentent y représentent des menaces létales.
+                Dans ces eaux, les cétacés sont exposés aux collisions avec les bateaux
+                et aux pièges des filets. Les impacts avec les navires tuent généralement les baleines sur le coup.
+                Les filets, quant à eux, leur causent de longues agonies qui peuvent durer des mois, voire plus.</p>
+        </div>
+    </div>
+</div>
+<main class="main">
+    <div class="partie2">
+        <h1 class="text1-P2"> CE QUE ON DOIT FAIRE !</h1>
+        <br>
+        <h2 class="text-P2">1. Réduire la Pollution Plastique </h2>
+        <p class="text-P2"> Pour limiter la pollution plastique, évitez les produits à usage unique
+            comme les bouteilles ou pailles, privilégiez le recyclage et participez à des initiatives
+            de nettoyage des plages et cours d’eau. Chaque petit geste contribue à un Océan plus propre.</p>
+        <br>
+        <img src="https://zupimages.net/up/24/49/koib.jpg" width="800" height="400">
+        <br>
+        <h2 class="text-P2"> 2. Consommer de Manière Responsable</h2>
+        <br>
+        <p class="text-P2"> Choisissez des produits de la mer issus de la pêche durable,
+            réduisez votre consommation de poissons surexploités, et luttez contre
+            le gaspillage alimentaire. Adopter des habitudes responsables préserve les ressources marines.</p>
+        <br>
+        <br>
+        <img src="https://zupimages.net/up/24/49/ahcx.jpg" width="800" height="400">
+        <br>
+        <br>
+        <h2 class="text-P2"> 3. Réduire les Émissions de CO₂</h2>
+        <br>
+        <p class="text-P2"> Adoptez des modes de transport écologiques, réduisez votre consommation d’énergie
+            en privilégiant les énergies renouvelables, et soutenez des politiques locales et globales
+            pour diminuer les émissions de gaz à effet de serre.</p>
+        <br>
+        <br>
+        <img src="https://zupimages.net/up/24/49/69gk.jpg" width="800" height="400">
+    </div>
+</main>
+
+
+<div class="partie7">
+    <img src="https://zupimages.net/up/21/02/xabk.jpg" alt="image" height="400" width="100%">
+    <div class="text-P7">
+        <img src="https://zupimages.net/up/24/49/swra.jpg" width="200px" height="200px" class="logo3">
+        <br>
+        <p> NOTRE MISSION <br>
+            Explorez les connexions entre l’Océan et le corps humain, <br>
+            et découvrez pourquoi préserver l’un, c’est protéger l’autre.</p>
+        <hr>
+        <br>
+        <p> Nous suivre par <br>
+        <img src="https://zupimages.net/up/21/49/km9v.jpeg" width="100px" height="100px" class="logo4">
+            <img src="https://zupimages.net/up/21/49/43ac.jpg" width="100px" height="100px" class="logo4">
+            <img src="https://zupimages.net/up/21/49/583n.jpg" width="100px" height="100px" class="logo4">
+            <img src="https://zupimages.net/up/21/49/9tor.jpg" width="100px" height="100px" class="logo4"></p>
+        <hr>
+    </div>
+</div>
+</body>
+</html>
